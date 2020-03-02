@@ -6,12 +6,111 @@
 -->
 <html>
 	<head>
-		<title>문지환의 포트폴리오</title>
+    <title>문지환의 포트폴리오</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style> 
+        /* basic */
+        .layer {
+            position: fixed;
+            width: 40%;
+            left: 50%;
+            margin-left: -20%; /* half of width */
+            height: 300px;
+            top: 50%;
+            margin-top: -150px; /* half of height */
+            overflow: auto;
+
+            /* decoration */
+            border: 1px solid #000;
+            background-color: #eee;
+            padding: 1em;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 600px) {
+            .layer {
+                width: 80%;
+                margin-left: -40%;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+        
+        /* Other elements */
+        .open-button {
+            font-size: 2em;
+        }
+        .text-center {
+            text-align: center;
+        }
+
+
+
+        /* 마스크  */
+
+        #mask {  
+          position:absolute;  
+          left:0;
+          top:0;
+          z-index:9998;  
+          background-color:#000;  
+          display:none;  
+        }
+        #dialog {
+          z-index:9999;
+        }
+
+
+    </style>
+      <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script>
+
+        function call(){
+            var $layer = $('.js-layer');
+            $layer.removeClass('hidden');
+        }
+
+        function wrapWindowByMask(){
+          //화면의 높이와 너비를 구한다.
+          var maskHeight = $(document).height();  
+          var maskWidth = $(window).width();  
+      
+          //마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+          $('#mask').css({'width':maskWidth,'height':maskHeight});  
+      
+          //애니메이션 효과
+          $('#mask').fadeIn(0);      
+          $('#mask').fadeTo("slow",0.8);    
+        }
+
+        $(document).ready(function(){
+              //검은 막 띄우기
+              $('.openMask').click(function(e){
+                  e.preventDefault();
+                  wrapWindowByMask();
+                  $("#dialog").show();
+              });  
+
+              //검은 막을 눌렀을 때
+              $('#mask').click(function () {  
+                  $(this).hide();  
+                  $('.window').hide();
+                  $("#dialog").hide();
+              });      
+          });
+    </script>
+
+
+
+
 	</head>
 	<body class="is-preload">
+    <div id="mask"></div>
 
 		<!-- Header -->
 			<section id="header">
@@ -56,6 +155,12 @@
 								</div>
 								<div class="container">
 									<header class="major">
+
+                  
+
+              
+          
+
 										<h2>문지환</h2>
                     <h3>'노력'을 '극복'으로 만드는 개발자</h3>
                     <p>[봉사]&nbsp;&nbsp;&nbsp; 공생하는 개발자<br/>
@@ -97,15 +202,20 @@
 									<p>국내외 봉사활동 및 재능기부 활동</p>
 									<div class="features">
 										<article>
-											<a href="#" class="image"><img src="images/volunteer01.jpg" alt="" /></a>
+                      <a href="#" class="image"><img src="images/volunteer01.jpg" alt="" /></a>
 											<div class="inner">
-												<h4>행복한 모바일 세상</h4>
-												<p>(2015.09~2015.12)<br>어르신께 휴대폰 활용 교육을 실시하여 정보소외 및 정보격차해소에 앞장서 세대 간 장벽이 없는 행복한 모바일 세상을 만들기 위한 봉사활동 프로그램</p>
+                        <a href="#" class="openMask"><h4>행복한 모바일 세상</h4></a>
+                        <!-- 레이어 띄우기  -->
+                      <!--  -->
+												<p>(2015.09~2015.12) &nbsp;&nbsp;&nbsp;
+                           <button type="button" onclick="call();" class="openMask button primary small" style="height:30px; text-align: center; padding: auto;">더 보기</button>
+
+                          <br>어르신께 휴대폰 활용 교육을 실시하여 정보소외 및 정보격차해소에 앞장서 세대 간 장벽이 없는 행복한 모바일 세상을 만들기 위한 봉사활동 프로그램</p>
 											</div>
                     </article>
                     <article>
-											<a href="#" class="image"><img src="images/volunteer01_2.jpg" alt="" /></a>
-											<div class="inner">
+                      <a href="#" class="image"><img src="images/volunteer01_2.jpg" alt=""/></a>
+                      <div class="inner">
 												<h4>어르신들을 위한 스마트폰 활용교육 봉사</h4>
 												<p>(2015.11)<br>성남 중원 노인복지관과 개별적으로 컨택 후, 스마트폰을 활용하고 싶으신 어르신들을 위한 교육 프로그램 기획 및 봉사.</p>
 											</div>
@@ -184,6 +294,11 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+      <div class="js-layer  layer  hidden transparent" id="dialog">
+        <h2>추가내용 h2</h2>
+        <div class="js-content">추가내용 적는 곳</div>
+      </div>
 
 	</body>
 </html>
