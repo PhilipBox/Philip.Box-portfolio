@@ -85,6 +85,19 @@
 			$("#vol2").show();
         }
 
+		function vol_call_3(){
+            // var $layer = $('.js-layer');
+            // $layer.removeClass('hidden');
+			$("#vol3").show();
+        }
+
+		function vol_call_4(){
+            // var $layer = $('.js-layer');
+            // $layer.removeClass('hidden');
+			$("#vol4").show();
+        }
+
+
         function wrapWindowByMask(){
           //화면의 높이와 너비를 구한다.
           var maskHeight = $(document).height();  
@@ -103,7 +116,6 @@
               $('.openMask').click(function(e){
                   e.preventDefault();
                   wrapWindowByMask();
-                //   $("#vol1").show();
               });  
 
               //검은 막을 눌렀을 때
@@ -112,6 +124,8 @@
                   $('.window').hide();
                   $("#vol1").hide();
 				  $("#vol2").hide();
+				  $("#vol3").hide();
+				  $("#vol4").hide();
               });      
           });
     </script>
@@ -166,28 +180,18 @@
 								</div>
 								<div class="container">
 									<header class="major">
-
-                  
-
-              
-          
-
 										<h2>문지환</h2>
-                    <h3>'노력'을 '극복'으로 만드는 개발자</h3>
-                    <p>[봉사]&nbsp;&nbsp;&nbsp; 공생하는 개발자<br/>
-										[협업]&nbsp;&nbsp;&nbsp; 소통하는 개발자</p>
-                  </header>
-                  
-                  
-                  <p>
-                    이름 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;문지환<br>
-                    생년월일 &nbsp;&nbsp;&nbsp;&nbsp;1994년 01월 07일<br>
-                    이메일 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jihwanla17@naver.com<br>
-                    연락처 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;010-9211-1220
-                  </p>
-                  <img src="images/education.jpg" alt="education"/>
-
-                </div>
+										<h3>'노력'을 '극복'으로 만드는 개발자</h3>
+										<p>[봉사]&nbsp;&nbsp;&nbsp; 공생하는 개발자<br/>[협업]&nbsp;&nbsp;&nbsp; 소통하는 개발자</p>
+									</header>
+									<p>
+										이름 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;문지환<br>
+										생년월일 &nbsp;&nbsp;&nbsp;&nbsp;1994년 01월 07일<br>
+										이메일 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jihwanla17@naver.com<br>
+										연락처 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;010-9211-1220
+									</p>
+									<img src="images/education.jpg" alt="education"/>
+								</div>
 							</section>
 
 						<!-- Two -->
@@ -206,55 +210,76 @@
 								</div>
 							</section>
 
-						<!-- Three -->
+						<!-- Three 봉사활동  -->
 							<section id="three">
 								<div class="container">
 									<h3>봉사활동</h3>
 									<p>국내외 봉사활동 및 재능기부 활동</p>
 									<div class="features">
-										<article>
-                      <a href="#" class="image"><img src="images/volunteer01.jpg" alt="" /></a>
-											<div class="inner">
-                        <a href="#" class="openMask"><h4>행복한 모바일 세상</h4></a>
-                        <!-- 레이어 띄우기  -->
-                      <!--  -->
-												<p>(2015.09~2015.12) &nbsp;&nbsp;&nbsp;
-                           <button type="button" onclick="vol_call_1();" class="openMask button primary small">더 보기</button>
 
-                          <br>어르신께 휴대폰 활용 교육을 실시하여 정보소외 및 정보격차해소에 앞장서 세대 간 장벽이 없는 행복한 모바일 세상을 만들기 위한 봉사활동 프로그램</p>
-											</div>
-                    </article>
-                    <article>
-                      <a href="#" class="image"><img src="images/volunteer01_2.jpg" alt=""/></a>
-                      <div class="inner">
-												<h4>어르신들을 위한 스마트폰 활용교육 봉사</h4>
-												<p>(2015.11) &nbsp;&nbsp;&nbsp;
-												<button type="button" onclick="vol_call_2();" class="openMask button primary small">더 보기</button>
-												<br>성남 중원 노인복지관과 개별적으로 컨택 후, 스마트폰을 활용하고 싶으신 어르신들을 위한 교육 프로그램 기획 및 봉사.</p>
+										<!-- 1)행복한 모바일 세상  -->
+										<article>
+											<a href="#" class="image"><img src="images/volunteer01.jpg" alt="" /></a>
+											<div class="inner">
+												<a href="#" class="openMask"><h4>행복한 모바일 세상</h4></a>
+												<p>(2015.09~2015.12) &nbsp;&nbsp;&nbsp;
+													<button type="button" onclick="vol_call_1();" class="openMask button primary small">더 보기</button>
+													<br>어르신께 휴대폰 활용 교육을 실시하여 정보소외 및 정보격차해소에 앞장서 세대 간 장벽이 없는 행복한 모바일 세상을 만들기 위한 봉사활동 프로그램
+												</p>
 											</div>
 										</article>
+
+										<!-- 2)스마트폰 활용교육 봉사 -->
+                   						 <article>
+											<a href="#" class="image"><img src="images/volunteer01_2.jpg" alt=""/></a>
+											<div class="inner">
+												<h4>어르신들을 위한 스마트폰 활용교육 봉사</h4>
+												<p>(2015.11) &nbsp;&nbsp;&nbsp;
+													<button type="button" onclick="vol_call_2();" class="openMask button primary small">더 보기</button>
+													<br>성남 중원 노인복지관과 개별적으로 컨택 후, 스마트폰을 활용하고 싶으신 어르신들을 위한 교육 프로그램 기획 및 봉사.
+												</p>
+											</div>
+										</article>
+										
+										<!-- 3)크리에이티브 스쿨 -->
+
 										<article>
 											<a href="#" class="image"><img src="images/volunteer02.jpg" alt="" /></a>
 											<div class="inner">
 												<h4>크리에이티브 스쿨</h4>
-                        <p>(2016.03~2016.06)<br>스마트 로봇과 IT기기를 활용한 프로그래밍(코딩) 교육을 통해 아동의 창의력과 사회성을 기르는 프로그램.</p>
+												<p>(2016.03~2016.06) &nbsp;&nbsp;&nbsp;
+													<button type="button" onclick="vol_call_3();" class="openMask button primary small">더 보기</button>
+													<br>스마트 로봇과 IT기기를 활용한 프로그래밍(코딩) 교육을 통해 아동의 창의력과 사회성을 기르는 프로그램.
+												</p>
 											</div>
-                    </article>
+										</article>
+										
+										<!-- 4)중국 해피노베이터 캠프 -->
 										<article>
 											<a href="#" class="image"><img src="images/volunteer03.jpg" alt="" /></a>
 											<div class="inner">
 												<h4>[해외봉사] 중국 해피노베이터 캠프</h4>
-                        <p>(2016.07~2016.08)<br>한국 봉사단과 중국 봉사단의 공동 프로젝트.<br>중국 사천의 지역 커뮤니티 문제 해결을 위한 창작활동 및 농민공 자녀 교육격차 해소.</p>
-											</div>
-                    </article>
-                    <article>
+												<p>(2016.07~2016.08) &nbsp;&nbsp;&nbsp;
+													<button type="button" onclick="vol_call_4();" class="openMask button primary small">더 보기</button>
+													<br>한국 봉사단과 중국 봉사단의 공동 프로젝트.
+													<br>중국 사천의 지역 커뮤니티 문제 해결을 위한 창작활동 및 농민공 자녀 교육격차 해소.
+												</p>
+											 </div>
+										   </article>
+										   
+										<!-- 5) 베트남 Smile For Children -->
+                   						<article>
 											<a href="#" class="image"><img src="images/volunteer04.jpg" alt="" /></a>
 											<div class="inner">
-												<h4>[해외봉사] 베트남 Save For Children</h4>
-                        <p>(2017.08)<br>분당 서울대학교 병원과 SK그룹의 봉사활동.<br>베트남 호치민의 얼굴기형아동을 대상으로 수술 전후 정서안정 활동 및 수술실 보조 지원.</p>
+												<h4>[해외봉사] 베트남 Smile For Children</h4>
+												 <p>(2017.08)
+													<br>분당 서울대학교 병원과 SK그룹의 봉사활동.
+													<br>베트남 호치민의 얼굴기형아동을 대상으로 수술 전후 정서안정 활동 및 수술실 보조 지원.
+												</p>
 											</div>
-                    </article>
-                    <article>
+                    					</article>
+										
+										<article>
 											<a href="#" class="image"><img src="images/volunteer05.jpg" alt="" /></a>
 											<div class="inner">
 												<h4>[재능기부] 학과 신입생들을 위한 C-Camp</h4>
@@ -299,60 +324,117 @@
 
 			</div>
 
-			<div class="container">
-			<section>
-			<div class="js-layer  layer  hidden transparent popup" id="vol1">
-					<h3 style="text-align: center;">행복한 모바일 세상(SK 대학생 자원봉사단 SUNNY)</h3>
-					<span class="image fit"><img src="images/vol1_1.jpg" alt="" /></span>
-						<div class="box alt">
-							<div class="row gtr-50 gtr-uniform">
-								<div class="col-4"><span class="image fit"><img src="images/vol1_3.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/vol1_4.jpg" alt="" /></span></div>
-								<div class="col-4">
-									<h4>행복한 모바일 세상</h4>
-									<p style="color: #000;">1세대와 3세대가 교류하며 노인소외 문제를 해결하는 프로그램</p>
-									<p>장소 : 광교노인복지관<br>활동기간 : 2015.09.19~2015.12.02</p>
-									<h5>주요 활동</h5>
-										<ul>
-											<li>스마트폰 기본 기능학습</li>
-											<li>교통 어플리케이션 사용방법</li>
-											<li>카메라, 카카오톡 사용방법</li>
-											<li>네이버 앱을 활용한 검색 및 뉴스확인</li>
-										</ul>
-								</div>
-							</div>
-						</div>
-				  </div>
-				</section>
-			</div>
+		
+			<!-- 봉사활동 레이어 팝업 -->
 
-			<div class="container">
-				<section>
-				<div class="js-layer  layer  hidden transparent popup" id="vol2">
-				<h3 style="text-align: center;">어르신들을 위한 스마트폰 활용교육 봉사</h3>
-				<span class="image fit"><img src="images/vol2_1.jpg" alt=""/></span>
-					<div class="box alt">
-						<div class="row gtr-50 gtr-uniform">
-							<div class="col-4"><span class="image fit"><img src="images/vol2_2.jpg" alt="" /></span></div>
-							<div class="col-4"><span class="image fit"><img src="images/vol2_3.jpg" alt="" /></span></div>
-							<div class="col-4">
-								<h4>어르신들을 위한 스마트폰 활용교육 봉사</h4>
-								<p style="color: #000;">기존 스마트폰 교육 봉사경험을 바탕으로 더 많은 어르신들께 봉사하고자 기획한 프로그램</p>
-								<p>장소 : 중원노인종합복지관<br>활동기간 : 2015.11.06~2015.11.27</p>
-								<h5>주요 활동</h5>
-									<ul>
-										<li>스마트폰 기본 기능학습</li>
-										<li>교통 어플리케이션 사용방법</li>
-										<li>카메라, 카카오톡 사용방법</li>
-										<li>네이버 앱을 활용한 검색 및 뉴스확인</li>
-									</ul>
-								</div>
-							</div>
+			<!-- 1)행복한모바일세상 레이어팝업 -->
+			<div class="js-layer  layer  hidden transparent popup" id="vol1">
+				<h3 style="text-align: center;">행복한 모바일 세상(SK 대학생 자원봉사단 SUNNY)</h3>
+				<span class="image fit"><img src="images/vol1_1.jpg" alt="" /></span>
+				<div class="box alt">
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-4"><span class="image fit"><img src="images/vol1_3.jpg" alt="" /></span></div>
+						<div class="col-4"><span class="image fit"><img src="images/vol1_4.jpg" alt="" /></span></div>
+						<div class="col-4">
+							<h4>행복한 모바일 세상</h4>
+							<p style="color: #000;">1세대와 3세대가 교류하며 노인소외 문제를 해결하는 프로그램</p>
+							<p>장소 : 광교노인복지관<br>활동기간 : 2015.09.19~2015.12.02</p>
+							<h5>주요 활동</h5>
+								<ul>
+									<li>스마트폰 기본 기능학습</li>
+									<li>교통 어플리케이션 사용방법</li>
+									<li>카메라, 카카오톡 사용방법</li>
+									<li>네이버 앱을 활용한 검색 및 뉴스확인</li>
+								</ul>
 						</div>
 					</div>
 				</div>
-			</section>
-		</div>
+			</div>
+				
+			<!-- 2)스마트폰활용교육봉사 레이어팝업 -->			
+			<div class="js-layer  layer  hidden transparent popup" id="vol2">
+				<h3 style="text-align: center;">어르신들을 위한 스마트폰 활용교육 봉사</h3>
+				<span class="image fit"><img src="images/vol2_1.jpg" alt=""/></span>
+				<div class="box alt">
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-4"><span class="image fit"><img src="images/vol2_2.jpg" alt="" /></span></div>
+						<div class="col-4"><span class="image fit"><img src="images/vol2_3.jpg" alt="" /></span></div>
+						<div class="col-4">
+							<h4>어르신들을 위한 스마트폰 활용교육 봉사</h4>
+							<p style="color: #000;">기존 스마트폰 교육 봉사경험을 바탕으로 더 많은 어르신들께 봉사하고자 기획한 프로그램</p>
+							<p>장소 : 중원노인종합복지관<br>활동기간 : 2015.11.06~2015.11.27</p>
+							<h5>주요 활동</h5>
+								<ul>
+									<li>스마트폰 기본 기능학습</li>
+									<li>교통 어플리케이션 사용방법</li>
+									<li>카메라, 카카오톡 사용방법</li>
+									<li>네이버 앱을 활용한 검색 및 뉴스확인</li>
+								</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 3)크리에이티브스쿨 레이어팝업 -->			
+			<div class="js-layer  layer  hidden transparent popup" id="vol3">
+				<h3 style="text-align: center;">크리에이티브 스쿨</h3>
+				<span class="image fit"><img src="images/vol3_1.jpg" alt=""/></span>
+				<div class="box alt">
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-4"><span class="image fit"><img src="images/vol3_2.jpg" alt="" /></span></div>
+						<div class="col-4"><span class="image fit"><img src="images/vol3_3.jpg" alt="" /></span></div>
+						<div class="col-4"><span class="image fit"><img src="images/vol3_5.jpg" alt="" /></span></div>
+						<div class="col-4"><span class="image fit"><img src="images/vol3_4.jpg" alt="" /></span></div>
+						<div class="col-6">
+							<h4>크리에이티브 스쿨</h4>
+							<p style="color: #000;">스마트 로봇과 IT기기를 활용한 프로그래밍(코딩) 교육을 통해 아동의 창의력과 사회성을 기르는 프로그램.</p>
+							<p>장소 : 수원칠보초등학교<br>활동기간 : 2016.03.19~2016.06.26</p>
+							<h5>주요 활동</h5>
+								<ul>
+									<li>알버트 로봇 : 코딩로직 이해</li>
+									<li>엔트리 코딩 실습 교육</li>
+									<li>메이키메이키 : 전도체의 이해 및 실습</li>
+								</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 4)중국봉사 레이어팝업 -->			
+			<div class="js-layer  layer  hidden transparent popup" id="vol4">
+				<h3 style="text-align: center;">[해외봉사:중국] 해피노베이터 캠프</h3>
+				<span class="image fit"><img src="images/vol4_5.jpg" alt=""/></span>
+				<div class="box alt">
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-4"><span class="image fit"><img src="images/vol4_2.jpg" alt="" /></span></div>
+						<div class="col-4"><span class="image fit"><img src="images/vol4_3.jpg" alt="" /></span></div>
+						<div class="col-4"><span class="image fit"><img src="images/vol4_4.jpg" alt="" /></span></div>
+						<div class="col-4"><span class="image fit"><img src="images/vol4_7.jpg" alt="" /></span></div>
+						<div class="col-4"><span class="image fit"><img src="images/vol4_6.jpg" alt="" /></span></div>
+						<div class="col-4"><span class="image fit"><img src="images/vol4_1.jpg" alt="" /></span></div>
+						<div class="col-6">
+							<h4>[해외봉사:중국] 해피노베이터 캠프</h4>
+							<p style="color: #000;">한국 봉사단과 중국 봉사단의 공동 프로젝트.
+								<br>중국 사천의 지역 커뮤니티 문제 해결을 위한 창작활동 및 농민공 자녀 교육격차 해소.
+							</p>
+							<p>장소 : 중국 사천<br>활동기간 : 2016.07.06~2016.08.09</p>
+							<h5>주요 활동</h5>
+								<ul>
+									<li>농민공 자녀 교육격차를 줄이기 위한 프로그램 기획</li>
+									<li>골드버그 프로젝트 진행</li>
+									<li>현지 아동과 창작활동 진행</li>
+									<li>한.중 대학생 문화교류</li>
+								</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+					
+				
+
+
+
+			
 
 
 		<!-- Scripts -->
