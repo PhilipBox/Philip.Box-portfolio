@@ -97,6 +97,12 @@
 			$("#vol4").show();
         }
 
+		function vol_call_5(){
+            // var $layer = $('.js-layer');
+            // $layer.removeClass('hidden');
+			$("#vol5").show();
+        }
+
 
         function wrapWindowByMask(){
           //화면의 높이와 너비를 구한다.
@@ -126,6 +132,8 @@
 				  $("#vol2").hide();
 				  $("#vol3").hide();
 				  $("#vol4").hide();
+				  $("#vol5").hide();
+				  
               });      
           });
     </script>
@@ -272,7 +280,8 @@
 											<a href="#" class="image"><img src="images/volunteer04.jpg" alt="" /></a>
 											<div class="inner">
 												<h4>[해외봉사] 베트남 Smile For Children</h4>
-												 <p>(2017.08)
+												 <p>(2017.08) &nbsp;&nbsp;&nbsp;
+													<button type="button" onclick="vol_call_5();" class="openMask button primary small">더 보기</button>
 													<br>분당 서울대학교 병원과 SK그룹의 봉사활동.
 													<br>베트남 호치민의 얼굴기형아동을 대상으로 수술 전후 정서안정 활동 및 수술실 보조 지원.
 												</p>
@@ -431,7 +440,7 @@
 			</div>
 
 			<!-- 5)베트남봉사 레이어팝업 -->			
-			<div class="js-layer  layer  hidden transparent popup" id="vol4">
+			<div class="js-layer  layer  hidden transparent popup" id="vol5">
 				<h3 style="text-align: center;">[해외봉사:베트남] Smile For Children</h3>
 				<span class="image fit"><img src="images/vol4_5.jpg" alt=""/></span>
 				<div class="box alt">
